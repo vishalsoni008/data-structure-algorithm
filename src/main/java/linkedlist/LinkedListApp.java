@@ -31,6 +31,17 @@ public class LinkedListApp {
         }
         System.out.println(node.data);
     }
+
+    public void midElement() {
+        Node fasTPointer = head;
+        Node slowPointer = head;
+
+        while (fasTPointer.next != null){
+            fasTPointer = fasTPointer.next.next;
+            slowPointer = slowPointer.next;
+        }
+        System.out.println("middle element is "+slowPointer.data);
+    }
     public static void main(String[] args) {
         LinkedListApp linkedListApp = new LinkedListApp();
 
@@ -39,5 +50,6 @@ public class LinkedListApp {
         }
 
         linkedListApp.show();
+        linkedListApp.midElement();
     }
 }
