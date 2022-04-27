@@ -1,7 +1,7 @@
 package linkedlist;
 
 public class LinkedList {
-    Node head;
+   static Node head;
 
     public void insert(int data){
         Node node = new Node();
@@ -27,4 +27,41 @@ public class LinkedList {
         }
        System.out.println(node.data);
    }
+
+
+    public void insertAtStart(int data) {
+        Node node = new Node();
+        node.data = data;
+        node.next = null;
+
+        node.next = head;
+        head = node;
+    }
+
+    public void insertAtSpeIndex(int index, int data) {
+        Node node = new Node();
+        node.data = data;
+        node.next = null;
+
+        if(index == 0){
+            insertAtStart(data);
+        }
+       Node n = head;
+        for(int i =0;i<index-1;i++){
+            n = n.next;
+        }
+        node.next = n.next;
+        n.next = node;
+    }
+
+    public void midElement(){
+        Node fastP = head;
+        Node slowP = head;
+
+        while (fastP.next!=null){
+            fastP = fastP.next.next;
+            slowP = slowP.next;
+        }
+        System.out.println("mid element is "+slowP.data);
+    }
 }

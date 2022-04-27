@@ -42,14 +42,41 @@ public class LinkedListApp {
         }
         System.out.println("middle element is "+slowPointer.data);
     }
+
+    void insertAtStart(int data){
+        Node node = new Node();
+        node.data = data;
+        node.next=null;
+
+        node.next = head;
+        head = node;
+    }
+
+    void insetAtSpcIndex(int index, int data) {
+        Node node = new Node();
+        node.data = data;
+        node.next=null;
+
+        if(index == 0){
+            insertAtStart(data);
+        }
+        Node n = head;
+        for(int i =0 ;i<index-1;i++){
+             n = n.next;
+        }
+        node.next = n.next;
+        n.next = node;
+
+    }
     public static void main(String[] args) {
         LinkedListApp linkedListApp = new LinkedListApp();
 
         for(int  i=0; i<=4;i++){
             linkedListApp.insert(i);
         }
-
-        linkedListApp.show();
         linkedListApp.midElement();
+        linkedListApp.insertAtStart(11);
+        linkedListApp.insetAtSpcIndex(2,22);
+        linkedListApp.show();
     }
 }

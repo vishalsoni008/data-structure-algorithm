@@ -9,6 +9,9 @@ public class Runner {
         linkedList.insert(7);
         linkedList.insert(6);
 
+        linkedList.insertAtStart(1);
+        linkedList.insertAtSpeIndex(2,11);
+     //   linkedList.midElement();
         linkedList.show();
     }
 }
