@@ -11,7 +11,8 @@ public class Runner {
 
         linkedList.insertAtStart(1);
         linkedList.insertAtSpeIndex(2,11);
-     //   linkedList.midElement();
+       // linkedList.midElement();
+        linkedList.deleteAtIndex(2);
         linkedList.show();
     }
 }

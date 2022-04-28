@@ -66,7 +66,22 @@ public class LinkedListApp {
         }
         node.next = n.next;
         n.next = node;
+    }
 
+    public void deleteAtIndex(int index){
+        if(index == 0){
+            head =head.next;
+        }
+        else{
+            Node n = head;
+            Node temp = null;
+            for(int i = 0; i<index-1;i++){
+                n = n.next;
+            }
+            temp = n.next;
+            n.next = temp.next;
+            System.out.println("deleted element is "+temp.data);
+        }
     }
     public static void main(String[] args) {
         LinkedListApp linkedListApp = new LinkedListApp();
@@ -77,6 +92,7 @@ public class LinkedListApp {
         linkedListApp.midElement();
         linkedListApp.insertAtStart(11);
         linkedListApp.insetAtSpcIndex(2,22);
+        linkedListApp.deleteAtIndex(2);
         linkedListApp.show();
     }
 }

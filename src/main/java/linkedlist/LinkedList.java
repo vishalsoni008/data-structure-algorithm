@@ -64,4 +64,21 @@ public class LinkedList {
         }
         System.out.println("mid element is "+slowP.data);
     }
+
+    public void deleteAtIndex(int index){
+        if(index == 0){
+            head = head.next;
+        }
+        else {
+            Node n = head;
+            Node temp = null;
+            for(int i=0; i<index-1;i++){
+                n = n.next;
+            }
+            temp = n.next;
+            n.next = temp.next;
+            System.out.println("deleted element is "+temp.data);
+        }
+    }
+
 }
