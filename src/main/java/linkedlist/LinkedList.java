@@ -1,5 +1,7 @@
 package linkedlist;
 
+import javax.sound.midi.Soundbank;
+
 public class LinkedList {
    static Node head;
 
@@ -80,5 +82,18 @@ public class LinkedList {
             System.out.println("deleted element is "+temp.data);
         }
     }
+    public Node reverse(Node node){
+        Node current = head;
+        Node nxt = null;
+        Node privious = null;
 
+        while (current!=null){
+            nxt = current.next;
+            current.next = privious;
+            privious = current;
+            current = nxt;
+        }
+        node = privious;
+        return node;
+    }
 }

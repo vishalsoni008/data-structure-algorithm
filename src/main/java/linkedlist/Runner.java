@@ -1,6 +1,7 @@
 package linkedlist;
 
 public class Runner {
+    static Node head;
     public static void main(String[] args) {
         LinkedList linkedList = new LinkedList();
 
@@ -13,6 +14,10 @@ public class Runner {
         linkedList.insertAtSpeIndex(2,11);
        // linkedList.midElement();
         linkedList.deleteAtIndex(2);
+
         linkedList.show();
+        linkedList.reverse(head);
+        linkedList.show();
+
     }
 }

@@ -83,6 +83,20 @@ public class LinkedListApp {
             System.out.println("deleted element is "+temp.data);
         }
     }
+    public Node reverse(Node node){
+        Node current = head;
+        Node nxt = null;
+        Node privious = null;
+
+        while (current!=null){
+            nxt = current.next;
+            current.next = privious;
+            privious = current;
+            current = nxt;
+        }
+        node = privious;
+        return  node;
+    }
     public static void main(String[] args) {
         LinkedListApp linkedListApp = new LinkedListApp();
 
@@ -93,6 +107,9 @@ public class LinkedListApp {
         linkedListApp.insertAtStart(11);
         linkedListApp.insetAtSpcIndex(2,22);
         linkedListApp.deleteAtIndex(2);
+        linkedListApp.show();
+        System.out.println("revers linked list is");
+        head = linkedListApp.reverse(head);
         linkedListApp.show();
     }
 }
