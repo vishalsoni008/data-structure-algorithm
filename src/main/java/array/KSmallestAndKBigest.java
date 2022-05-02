@@ -1,7 +1,6 @@
 package array;
 
 import java.util.Arrays;
-import java.util.Scanner;
 
 public class KSmallestAndKBigest {
    static int findKSize(int[] arr,int k){
