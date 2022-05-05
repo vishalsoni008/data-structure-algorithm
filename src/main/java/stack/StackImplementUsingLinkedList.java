@@ -42,6 +42,10 @@ public class StackImplementUsingLinkedList {
         System.out.println("peek element is "+node.data);
     }
 
+    void pop(){
+        peek();
+    }
+
     public static void main(String[] args) {
         StackImplementUsingLinkedList stack = new StackImplementUsingLinkedList();
 
