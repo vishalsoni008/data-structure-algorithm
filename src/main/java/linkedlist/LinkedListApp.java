@@ -3,6 +3,7 @@ package linkedlist;
 public class LinkedListApp {
 
     static Node head;
+    static Node lastPointer;
     class Node{
           int data;
          Node next;
@@ -20,6 +21,7 @@ public class LinkedListApp {
                 n= n.next;
             }
             n.next = node;
+            lastPointer = node;
         }
     }
 
@@ -97,6 +99,9 @@ public class LinkedListApp {
         node = privious;
         return  node;
     }
+    void lastValue(){
+        System.out.println("last element is "+lastPointer.data);
+    }
     public static void main(String[] args) {
         LinkedListApp linkedListApp = new LinkedListApp();
 
@@ -108,8 +113,9 @@ public class LinkedListApp {
         linkedListApp.insetAtSpcIndex(2,22);
         linkedListApp.deleteAtIndex(2);
         linkedListApp.show();
-        System.out.println("revers linked list is");
-        head = linkedListApp.reverse(head);
+       // System.out.println("revers linked list is");
+      //  head = linkedListApp.reverse(head);
+        linkedListApp.lastValue();
         linkedListApp.show();
     }
 }
