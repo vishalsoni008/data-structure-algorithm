@@ -1,6 +1,4 @@
-package linkedlist;
-
-import javax.sound.midi.Soundbank;
+package linkedlist.single;
 
 public class LinkedList {
    static Node head;
