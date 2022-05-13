@@ -3,6 +3,7 @@ package linkedlist.doubly;
 public class DoubleLinkedList {
 
     static Node head;
+    static Node tail;
 
     class Node{
         int data;
@@ -27,10 +28,27 @@ public class DoubleLinkedList {
         System.out.println(n.data);
     }
 
+    void push(int data){
+        Node node = new Node();
+        node.data = data;
+
+        if (head == null){
+            head = tail = node;
+        }
+        else {
+            tail.next = node;
+            node.previous = tail;
+            tail = node;
+        }
+    }
+
     public static void main(String[] args) {
         DoubleLinkedList doubleLinkedList = new DoubleLinkedList();
-        doubleLinkedList.insertAtStart(1);
+        doubleLinkedList.push(3);
+        doubleLinkedList.push(4);
+        doubleLinkedList.push(5);
         doubleLinkedList.insertAtStart(2);
+        doubleLinkedList.insertAtStart(1);
         doubleLinkedList.show();
 
     }
