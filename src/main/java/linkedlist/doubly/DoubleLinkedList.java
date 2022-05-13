@@ -5,7 +5,7 @@ public class DoubleLinkedList {
     static Node head;
     static Node tail;
 
-    class Node{
+    static class Node{
         int data;
         Node previous;
         Node next;
@@ -14,9 +14,9 @@ public class DoubleLinkedList {
         Node node = new Node();
         node.data = data;
 
-        node.next = head;
-        node.previous = null;
+        node.next= head;
         head = node;
+        node.previous = null;
     }
 
     void show(){
