@@ -3,20 +3,30 @@ package searching;
 import java.util.Arrays;
 
 public class BinarySearch {
-    static int search(int[] arr, int element){
-        int n =arr.length;
-        Arrays.sort(arr);
-        Arrays.toString(arr);
-        int s = n/2;
-        int middle = arr[s];
-        //System.out.println(middle);
-        for (int i=0;i<arr.length;i++){
 
+    static int binarySearch(int[] arr, int n){
+        int low =0;
+        int high = arr.length-1;
+
+        while (low<=high){
+            int mid = (high+low)/2;
+
+            if(arr[mid] == n){
+                return arr[mid];
+            }
+            if(n<arr[mid]){
+                high = mid-1;
+            }
+            else
+                low = mid+1;
         }
-        return 0;
+        return -1;
     }
+
     public static void main(String[] args) {
-        int[] arr = {1,5,6,2,7};
-        search(arr, 4);
+        int arr[] = new int[]{1,2,3,4,5,6};
+
+        System.out.println(binarySearch(arr,2));
+
     }
 }
