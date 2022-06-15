@@ -42,6 +42,19 @@ public class DoubleLinkedList {
         }
     }
 
+    Node reverseDL(Node node){
+
+        Node current =tail;
+        Node pre = null;
+
+        while (current.previous != null){
+            pre = current.previous;
+            current = pre;
+        }
+        node = pre;
+        return node;
+    }
+
     public static void main(String[] args) {
         DoubleLinkedList doubleLinkedList = new DoubleLinkedList();
         doubleLinkedList.push(3);
@@ -49,6 +62,9 @@ public class DoubleLinkedList {
         doubleLinkedList.push(5);
         doubleLinkedList.insertAtStart(2);
         doubleLinkedList.insertAtStart(1);
+        doubleLinkedList.show();
+        tail = doubleLinkedList.reverseDL(tail);
+        System.out.println("reverse dl is ");
         doubleLinkedList.show();
 
     }
