@@ -14,7 +14,7 @@ public class MathSquartMethod {
         return true;
     }
     public static void main(String[] args) {
-        if (isPrime(7)){
+        if (isPrime(4)){
             System.out.println("this is a prime number");
         }
         else {
