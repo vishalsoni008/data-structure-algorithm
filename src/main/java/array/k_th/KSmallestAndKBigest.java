@@ -1,4 +1,4 @@
-package array;
+package array.k_th;
 
 import java.util.Arrays;
 
