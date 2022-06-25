@@ -4,6 +4,7 @@ import java.util.Arrays;
 
 public class CyclicRotate {
 
+
     static int[] arr = new int[]{1,2,3,4};
 
     public static void rotate(){
