@@ -31,3 +31,15 @@ build/
 
 ### VS Code ###
 .vscode/
+
+.classpath
+.project
+.settings/
+target/
+.classpath
+.idea/misc.xml
+.idea/runConfigurations.xml
+.project
+.settings/org.eclipse.jdt.core.prefs
+.project
+.project
