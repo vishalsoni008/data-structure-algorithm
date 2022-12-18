@@ -31,7 +31,5 @@ public class BinaryTree {
         System.out.println(binaryTree.root.item);
         System.out.println(binaryTree.root.left.item);
         System.out.println(binaryTree.root.right.item);
-
-
     }
 }
